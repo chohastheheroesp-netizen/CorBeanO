@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website</title>
+        <title>Eligibility Criteria — Cor Bean O</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -26,28 +26,28 @@
         </header>
         <main>
             <section id="requirements">
-                <h2>Eligibility Criteria</h2>
-                <p>Our courses are designed for coffee enthusiasts at all levels. Review the general requirements below and use our checker tool to determine your eligibility for specific courses.</p>
+                <h2>Developer Program Requirements</h2>
+                <p>Our 6-month junior developer programme is designed for ambitious newcomers to tech. Review the requirements below and use our checker to see which learning path suits you best.</p>
                 <div class="eligibility-requirements">
                     <h3>General Requirements</h3>
                     <ul class="requirements-list">
                         <li>✓ Minimum age: 18 years old</li>
-                        <li>✓ No formal coffee experience required for beginner courses</li>
-                        <li>✓ Able to commit to course schedule (typically 2-3 hours per session)</li>
-                        <li>✓ Genuine passion for coffee and willingness to learn</li>
+                        <li>✓ No coding experience necessary — we teach from scratch</li>
+                        <li>✓ Full-time commitment (37.5 hours/week) for 6 months minimum</li>
+                        <li>✓ Genuine passion for coding and willingness to learn continuously</li>
                     </ul>
-                    <h3>Course-Specific Prerequisites</h3>
+                    <h3>Learning Path Prerequisites</h3>
                     <ul class="requirements-list">
-                        <li><strong>Barista Fundamentals:</strong> None (open to all)</li>
-                        <li><strong>Advanced Brewing Techniques:</strong> Completion of Barista Fundamentals</li>
-                        <li><strong>Espresso Mastery:</strong> Completion of Barista Fundamentals</li>
-                        <li><strong>Coffee Cupping & Sensory:</strong> Completion of Advanced Brewing AND Espresso Mastery</li>
+                        <li><strong>Web Fundamentals:</strong> None — starts week 1 for all developers</li>
+                        <li><strong>JavaScript Mastery:</strong> Must complete Web Fundamentals (weeks 3–4)</li>
+                        <li><strong>React & Modern Frontend:</strong> Must complete JavaScript Mastery (weeks 5–8)</li>
+                        <li><strong>Backend Development:</strong> Must complete React AND JavaScript (weeks 9+)</li>
                     </ul>
                 </div>
             </section>
             <section id="checker">
-                <h2>Check Your Eligibility</h2>
-                <p>Answer a few quick questions to see which courses are right for you.</p>
+                <h2>Check Your Application Status</h2>
+                <p>Use the form below to see which learning paths you're qualified for.</p>
                 <form id="eligibilityForm" class="form-container eligibility-checker">
                     <div class="form-group">
                         <label for="age">What is your age? *</label>
@@ -55,31 +55,30 @@
                         <span class="error-message" id="ageError"></span>
                     </div>
                     <div class="form-group">
-                        <label for="experience">Years of coffee experience *</label>
+                        <label for="experience">Coding Experience *</label>
                         <select id="experienceLevel" name="experienceLevel" required>
                             <option value="">-- Select experience level --</option>
-                            <option value="0">None / Just started</option>
-                            <option value="1">Less than 1 year</option>
-                            <option value="2">1-2 years</option>
-                            <option value="3">3-5 years</option>
-                            <option value="5">5+ years</option>
+                            <option value="0">None / Never coded</option>
+                            <option value="1">Some tutorials completed</option>
+                            <option value="2">Built personal projects</option>
+                            <option value="3">Professional experience</option>
                         </select>
                         <span class="error-message" id="experienceLevelError"></span>
                     </div>
                     <div class="form-group">
-                        <label>Courses you've completed</label>
+                        <label>Skills You Already Have:</label>
                         <div class="checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" id="completed-barista" name="completedCourses" value="barista">
-                                Barista Fundamentals
+                                HTML5 & CSS3
                             </label>
                             <label class="checkbox-label">
                                 <input type="checkbox" id="completed-brewing" name="completedCourses" value="brewing">
-                                Advanced Brewing Techniques
+                                JavaScript
                             </label>
                             <label class="checkbox-label">
                                 <input type="checkbox" id="completed-espresso" name="completedCourses" value="espresso">
-                                Espresso Mastery
+                                React
                             </label>
                         </div>
                     </div>
@@ -96,9 +95,9 @@
               <div class="footer-brand">
                 <a class="nav-logo" href="index.html">
                   <img src="logo.jpg" alt="Cor Bean O logo">
-                  <span>Cor Bean <span class="accent">O</span></span>
+                  <span>Code<span class="accent">Craft</span></span>
                 </a>
-                <p>Cor Bean O builds modern web experiences for businesses and teams, with a focus on clarity, accessibility, and fast delivery.</p>
+                <p>Cor Bean O builds modern software solutions and digital products. We specialise in mentoring junior developers while delivering world-class applications for ambitious companies.</p>
                 <div class="footer-social">
                   <a href="#" class="social-btn" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">

@@ -254,50 +254,50 @@ if (eligibilityForm) {
       return;
     }
 
-    // Determine eligible courses
+    // Determine eligible learning paths
     const eligibleCourses = [];
 
-    // Barista Fundamentals - available to everyone aged 18+
+    // Web Fundamentals - available to everyone aged 18+
     eligibleCourses.push({
-      name: 'Barista Fundamentals',
+      name: 'Web Fundamentals',
       level: 'Beginner',
       canEnroll: true
     });
 
-    // Advanced Brewing Techniques - requires Barista Fundamentals completed
+    // JavaScript Mastery - requires Web Fundamentals completed
     eligibleCourses.push({
-      name: 'Advanced Brewing Techniques',
+      name: 'JavaScript Mastery',
       level: 'Intermediate',
       canEnroll: completedCourses.includes('barista'),
-      requirement: 'Requires completion of Barista Fundamentals'
+      requirement: 'Requires completion of Web Fundamentals'
     });
 
-    // Espresso Mastery - requires Barista Fundamentals completed
+    // React & Modern Frontend - requires JavaScript Mastery completed
     eligibleCourses.push({
-      name: 'Espresso Mastery',
+      name: 'React & Modern Frontend',
       level: 'Intermediate',
       canEnroll: completedCourses.includes('barista'),
-      requirement: 'Requires completion of Barista Fundamentals'
+      requirement: 'Requires completion of JavaScript Mastery'
     });
 
-    // Coffee Cupping & Sensory - requires both Advanced Brewing AND Espresso Mastery
+    // Backend Development - requires both JavaScript AND React completed
     eligibleCourses.push({
-      name: 'Coffee Cupping & Sensory Analysis',
+      name: 'Backend Development',
       level: 'Advanced',
       canEnroll: completedCourses.includes('brewing') && completedCourses.includes('espresso'),
-      requirement: 'Requires completion of Advanced Brewing Techniques AND Espresso Mastery'
+      requirement: 'Requires completion of JavaScript AND React learning paths'
     });
 
     // Build result HTML
-    let resultHTML = '<h3 style="color: #5cb85c;">✓ Eligibility Check Complete</h3>';
+    let resultHTML = '<h3 style="color: #5cb85c;">✓ Application Status Check Complete</h3>';
     resultHTML += `<p><strong>Age:</strong> ${age} years old ✓</p>`;
-    resultHTML += `<p><strong>Experience Level:</strong> ${experienceLevel > 0 ? experienceLevel + ' year(s)' : 'None'}</p>`;
+    resultHTML += `<p><strong>Experience Level:</strong> ${experienceLevel > 0 ? experienceLevel + ' level' : 'Beginner'}</p>`;
 
     if (completedCourses.length > 0) {
-      resultHTML += `<p><strong>Completed Courses:</strong> ${completedCourses.join(', ')}</p>`;
+      resultHTML += `<p><strong>Skills Completed:</strong> ${completedCourses.join(', ')}</p>`;
     }
 
-    resultHTML += '<h4 style="margin-top: 1.5rem;">Your Eligible Courses:</h4>';
+    resultHTML += '<h4 style="margin-top: 1.5rem;">Your Eligible Learning Paths:</h4>';
     resultHTML += '<ul style="list-style: none; padding: 0;">';
 
     eligibleCourses.forEach(course => {
